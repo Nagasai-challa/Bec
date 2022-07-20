@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<style>
+			body{
+				background-color:lightgreen
+			}
+			div{
+				font-size:35px;
+			}
+			input{
+				height:30px;
+				width:300px;
+				border:2px solid;
+				font-size:20px;
+			}
+			div{
+				background-color:tomato;
+				height:300px;
+				width:400px;
+				margin-left:400px;
+				padding:20px 20px;
+				border:2px solid;
+				border-radius:10px 10px;
+			}
+			button{
+				height:40px;
+				width:150px;
+				background-color:cyan;
+				font-size:20px;
+				position:absolute;
+				left:500px;
+				top:270px;
+			}
+		</style>
+		<script>
+			var res
+			function check(){
+				res=Number(document.getElementById("input").value)
+				if(res%2===0){
+					document.getElementById("output").innerHTML="Given Number is Even"
+
+				}
+				else{
+					document.getElementById("output").innerHTML="Given Number is Odd"
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<div>
+			Enter a Number:<br/>
+			<input/ id="input"><br/>
+			Result:<br/>
+			<p id="output"></p>
+			<button onclick="check()" type="submit"    >Submit</button>
+		</div>
+	</body>
+</html>
