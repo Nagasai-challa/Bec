@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>mypage</title>
+	<style>
+		#output{
+			position: absolute;
+			left:505px;
+			top:70px;
+			font-size: 50px;
+		}
+		div{
+			width: 500px;
+			background-color: gray;
+			font-size: 30px;
+			margin-left: 500px;
+			padding-left: 50px;
+			border-radius: 15px 15px;
+			margin-top: 200px;
+
+		}
+		input{
+			height: 35px;
+			width: 200px;
+			border:1px solid;
+			border-radius: 5px 5px;
+			font-size: 20px;
+		}
+		button{
+			height: 45px;
+			width: 150px;
+			margin-top: 10px;
+			background-color:cyan;
+			font-size: 20px;
+		}
+	</style>
+	<script>
+		function fun(ref)
+		{
+			ref.style.backgroundColor="lightblue"
+		}
+		function fun2(ref)
+		{
+			ref.style.backgroundColor=""
+		}
+		function input(ref)
+		{
+			var val=ref.value
+			document.getElementById("output").innerHTML=val
+		}
+		function selectFun(ref)
+		{
+			ref.style.backgroundColor="red"
+		}
+		function submitFun(){
+			open("https://google.com","","height=300px,width=300px","left:600px")
+		}
+		function fun3()
+		{
+			document.body.style.backgroundColor="yellow"
+		}
+		function fun4()
+		{
+			document.body.style.backgroundColor="lightgreen"
+		}
+	</script>
+</head>
+<body onload="fun3()" onresize="fun4()">
+	<h1 id="output"></h1>
+	<div>
+		<form onsubmit="submitFun()">
+			Enter your Name:<br/>
+			<input onfocus="fun(this)" id="txt" onblur="fun2(this)" oninput="input(this)" onselect="selectFun(this)"/><br/>
+			Enter your city:<br/>
+			<input onfocus="fun(this)" id="txt2" onblur="fun2(this)" oninput="input(this)" onselect="selectFun(this)"/><br/>
+			<button type="submit" style="background-color:lightgreen">Submit</button>
+			<button type="reset">Reset</button>
+		</form>
+	</div>
+</body>
+</html>
